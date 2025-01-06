@@ -1,25 +1,20 @@
-package LaunchPad;
+package sts2teaser;
 
 import basemod.BaseMod;
 import basemod.interfaces.*;
-import com.badlogic.gdx.Gdx;
-import com.evacipated.cardcrawl.mod.stslib.Keyword;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
-import com.google.gson.Gson;
-
-import java.nio.charset.StandardCharsets;
 
 @SuppressWarnings({"unused", "WeakerAccess"})
 @SpireInitializer
-public class LaunchPad implements PostInitializeSubscriber {
+public class STS2Teaser implements PostInitializeSubscriber {
 
-    public static final String modID = "launchpad"; //TODO: Change this.
+    public static final String modID = "sts2-teaser"; //TODO: Change this.
 
     public static String makeID(String idText) {
         return modID + ":" + idText;
     }
 
-    public LaunchPad() {
+    public STS2Teaser() {
         BaseMod.subscribe(this);
     }
 
@@ -32,7 +27,7 @@ public class LaunchPad implements PostInitializeSubscriber {
     }
 
     public static void initialize() {
-        LaunchPad thismod = new LaunchPad();
+        STS2Teaser thismod = new STS2Teaser();
     }
 
     @Override

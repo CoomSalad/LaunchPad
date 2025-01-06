@@ -1,4 +1,4 @@
-package LaunchPad.util;
+package sts2teaser.util;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Texture;
@@ -9,7 +9,7 @@ import com.evacipated.cardcrawl.modthespire.lib.SpirePrefixPatch;
 
 import java.util.HashMap;
 
-import static LaunchPad.LaunchPad.makeImagePath;
+import static sts2teaser.STS2Teaser.makeImagePath;
 
 public class TexLoader {
     private static HashMap<String, Texture> textures = new HashMap<>();
