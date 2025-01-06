@@ -28,6 +28,10 @@ public class STS2Teaser implements EditCardsSubscriber, PostInitializeSubscriber
         return modID + "Resources/images/" + resourcePath;
     }
 
+    public static String makeCardPath(String cardName) {
+        return modID + "Resources/images/cards/" + cardName + ".png";
+    }
+
     public static void initialize() {
         STS2Teaser thismod = new STS2Teaser();
     }
