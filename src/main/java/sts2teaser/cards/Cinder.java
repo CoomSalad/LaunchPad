@@ -23,7 +23,7 @@ public class Cinder extends CustomCard {
     private static String DESC = "Deal !D! damage. NL Exhaust the top !M! cards in NL your Draw Pile.";
 
     public Cinder() {
-        super("Cinder", NAME, makeCardPath("Cinder"), 2, DESC, AbstractCard.CardType.ATTACK, AbstractCard.CardColor.RED, AbstractCard.CardRarity.COMMON, AbstractCard.CardTarget.ENEMY);
+        super(ID, NAME, makeCardPath("Cinder"), 2, DESC, AbstractCard.CardType.ATTACK, AbstractCard.CardColor.RED, AbstractCard.CardRarity.COMMON, AbstractCard.CardTarget.ENEMY);
         baseDamage = 15;
         baseMagicNumber = magicNumber = 2;
     }

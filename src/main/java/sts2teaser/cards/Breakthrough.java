@@ -25,7 +25,7 @@ public class Breakthrough extends CustomCard {
     private static String DESC = "Lose !M! HP. NL Deal !D! damage to ALL enemies.";
 
     public Breakthrough() {
-        super("Breakthrough", NAME, makeCardPath("Breakthrough"), 1, DESC, AbstractCard.CardType.ATTACK, AbstractCard.CardColor.RED, AbstractCard.CardRarity.COMMON, CardTarget.ALL_ENEMY);
+        super(ID, NAME, makeCardPath("Breakthrough"), 1, DESC, AbstractCard.CardType.ATTACK, AbstractCard.CardColor.RED, AbstractCard.CardRarity.COMMON, CardTarget.ALL_ENEMY);
         baseDamage = 10;
         baseMagicNumber = magicNumber = 1;
         isMultiDamage = true;

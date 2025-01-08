@@ -23,7 +23,7 @@ public class BloodWall extends CustomCard {
     private static String DESC = "Lose !M! HP. NL Gain !B! Block.";
 
     public BloodWall() {
-        super("BloodWall", NAME, makeCardPath("BloodWall"), 2, DESC, AbstractCard.CardType.SKILL, AbstractCard.CardColor.RED, AbstractCard.CardRarity.COMMON, CardTarget.SELF);
+        super(ID, NAME, makeCardPath("BloodWall"), 2, DESC, AbstractCard.CardType.SKILL, AbstractCard.CardColor.RED, AbstractCard.CardRarity.COMMON, CardTarget.SELF);
         baseBlock = 15;
         baseMagicNumber = magicNumber = 2;
     }
