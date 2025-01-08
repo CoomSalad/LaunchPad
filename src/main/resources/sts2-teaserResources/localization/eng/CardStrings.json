@@ -1,0 +1,6 @@
+{
+  "${ModID}:Cinder": {
+    "NAME": "Cinder",
+    "DESCRIPTION": "Deal !D! damage. NL Exhaust the top !M! cards in NL your Draw Pile."
+  }
+}

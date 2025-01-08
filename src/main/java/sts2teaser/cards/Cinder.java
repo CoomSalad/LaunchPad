@@ -11,7 +11,9 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.AbstractCreature;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
+import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import static sts2teaser.STS2Teaser.*;
@@ -19,11 +21,10 @@ import static sts2teaser.STS2Teaser.*;
 public class Cinder extends CustomCard {
     public final static String ID = makeID("Cinder");
 
-    private static String NAME = "Cinder";
-    private static String DESC = "Deal !D! damage. NL Exhaust the top !M! cards in NL your Draw Pile.";
+    private static CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
 
     public Cinder() {
-        super(ID, NAME, makeCardPath("Cinder"), 2, DESC, AbstractCard.CardType.ATTACK, AbstractCard.CardColor.RED, AbstractCard.CardRarity.COMMON, AbstractCard.CardTarget.ENEMY);
+        super(ID, cardStrings.NAME, makeCardPath("Cinder"), 2, cardStrings.DESCRIPTION, AbstractCard.CardType.ATTACK, AbstractCard.CardColor.RED, AbstractCard.CardRarity.COMMON, AbstractCard.CardTarget.ENEMY);
         baseDamage = 15;
         baseMagicNumber = magicNumber = 2;
     }

@@ -4,11 +4,14 @@ import basemod.AutoAdd;
 import basemod.BaseMod;
 import basemod.interfaces.*;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
+import com.megacrit.cardcrawl.core.Settings;
+import com.megacrit.cardcrawl.localization.CardStrings;
+import com.megacrit.cardcrawl.localization.PowerStrings;
 import sts2teaser.cards.Cinder;
 
 @SuppressWarnings({"unused", "WeakerAccess"})
 @SpireInitializer
-public class STS2Teaser implements EditCardsSubscriber, PostInitializeSubscriber {
+public class STS2Teaser implements EditCardsSubscriber, EditStringsSubscriber, PostInitializeSubscriber {
 
     public static final String modID = "sts2-teaser"; //TODO: Change this.
 
@@ -18,6 +21,19 @@ public class STS2Teaser implements EditCardsSubscriber, PostInitializeSubscriber
 
     public STS2Teaser() {
         BaseMod.subscribe(this);
+    }
+
+    public static Settings.GameLanguage[] SupportedLanguages = {
+            Settings.GameLanguage.ENG,
+    };
+
+    private String getLangString() {
+        for (Settings.GameLanguage lang : SupportedLanguages) {
+            if (lang.equals(Settings.language)) {
+                return Settings.language.name().toLowerCase();
+            }
+        }
+        return "eng";
     }
 
     public static String makePath(String resourcePath) {
@@ -47,5 +63,11 @@ public class STS2Teaser implements EditCardsSubscriber, PostInitializeSubscriber
                 .packageFilter(Cinder.class) //In the same package as this class
                 .setDefaultSeen(true) //And marks them as seen in the compendium
                 .cards(); //Adds the cards
+    }
+
+    @Override
+    public void receiveEditStrings() {
+        BaseMod.loadCustomStringsFile(CardStrings.class, modID + "Resources/localization/" + getLangString() + "/Cardstrings.json");
+        BaseMod.loadCustomStringsFile(PowerStrings.class, modID + "Resources/localization/" + getLangString() + "/Powerstrings.json");
     }
 }
