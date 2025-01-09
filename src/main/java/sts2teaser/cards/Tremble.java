@@ -53,6 +53,7 @@ public class Tremble extends CustomCard {
         if (!this.upgraded) {
             upgradeName();
             rawDescription = cardStrings.UPGRADE_DESCRIPTION;
+            initializeDescription();
             target = AbstractCard.CardTarget.ALL_ENEMY;
         }
     }

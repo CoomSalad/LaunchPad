@@ -14,7 +14,7 @@
   "${ModID}:Tremble": {
     "NAME": "Tremble",
     "DESCRIPTION": "Apply !M! Vulnerable. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Apply !M! Vulnerable. NL Exhaust."
+    "UPGRADE_DESCRIPTION": "Apply !M! Vulnerable to ALL enemies. NL Exhaust."
   },
   "${ModID}:Bully": {
     "NAME": "Bully",
@@ -24,5 +24,18 @@
     "NAME": "Aggression",
     "DESCRIPTION": "At the start of your turn, NL put a random Attack from NL your discard pile into your NL Hand and Upgrade it.",
     "UPGRADE_DESCRIPTION": "At the start of your turn, NL put !M! random Attacks from NL your discard pile into your NL Hand and Upgrade it."
+  },
+  "${ModID}:StoneArmor": {
+    "NAME": "Stone Armor",
+    "DESCRIPTION": "Gain !M! Plated Armor. NL Lose 1 Dexterity."
+  },
+  "${ModID}:Unrelenting": {
+    "NAME": "Unrelenting",
+    "DESCRIPTION": "Deal !D! damage. NL The next Attack you play costs 0."
+  },
+  "${ModID}:CHAAARGE": {
+    "NAME": "CHAAARGE",
+    "DESCRIPTION": "Deal damage equal to NL your Block to ALL enemies. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Deal damage equal to NL your Block to ALL enemies."
   }
 }

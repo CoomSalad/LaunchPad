@@ -13,50 +13,37 @@ import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
-import sts2teaser.powers.AggressionPower;
-
-import java.util.Iterator;
+import com.megacrit.cardcrawl.powers.watcher.FreeAttackPower;
 
 import static sts2teaser.STS2Teaser.*;
 
-public class Aggression extends CustomCard {
-    public final static String ID = makeID("Aggression");
+public class Unrelenting extends CustomCard {
+    public final static String ID = makeID("Unrelenting");
 
     private static CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
 
-    public Aggression() {
-        super(ID, cardStrings.NAME, makeCardPath("Aggression"), 1, cardStrings.DESCRIPTION, CardType.POWER, AbstractCard.CardColor.RED, CardRarity.RARE, AbstractCard.CardTarget.SELF);
-        baseMagicNumber = magicNumber = 1;
+    public Unrelenting() {
+        super(ID, cardStrings.NAME, makeCardPath("Unrelenting"), 2, cardStrings.DESCRIPTION, AbstractCard.CardType.ATTACK, AbstractCard.CardColor.RED, AbstractCard.CardRarity.UNCOMMON, AbstractCard.CardTarget.ENEMY);
+        baseDamage = 12;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        addToBot((AbstractGameAction)new ApplyPowerAction((AbstractCreature)p, (AbstractCreature)p, (AbstractPower)new AggressionPower((AbstractCreature)p, this.magicNumber), this.magicNumber));
-    }
-
-    public void applyPowers() {
-        super.applyPowers();
-        if (magicNumber > 1) {
-            rawDescription = cardStrings.UPGRADE_DESCRIPTION;
-        } else {
-            rawDescription = cardStrings.DESCRIPTION;
-        }
+        addToBot((AbstractGameAction)new DamageAction((AbstractCreature)m, new DamageInfo((AbstractCreature)p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.SMASH));
+        addToBot((AbstractGameAction)new ApplyPowerAction((AbstractCreature)p, (AbstractCreature)p, (AbstractPower)new FreeAttackPower((AbstractCreature)p, 1), 1));
     }
 
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
-            rawDescription = cardStrings.UPGRADE_DESCRIPTION;
-            initializeDescription();
-            upgradeMagicNumber(1);
+            upgradeDamage(3);
         }
     }
 
     public AbstractCard makeCopy() {
-        return new Aggression();
+        return new Unrelenting();
     }
 }
