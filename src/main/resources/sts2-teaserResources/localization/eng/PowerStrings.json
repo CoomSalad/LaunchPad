@@ -1,12 +1,10 @@
 {
-  "${ModID}:Drunk": {
-    "NAME": "Drunk",
+  "${ModID}:Aggression": {
+    "NAME": "Aggression",
     "DESCRIPTIONS": [
-      "At the start of your turn, draw #b",
-      " card, then randomize cost of the rightmost #b",
-      " cards, then randomize cost of the rightmost #b",
-      " card.",
-      " cards."
+      "At the start of your turn, put #b",
+      " random Attack from your discard pile into your Hand and Upgrade it.",
+      " random Attacks from your discard pile into your Hand and Upgrade them."
     ]
   }
 }
