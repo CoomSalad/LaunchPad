@@ -12,8 +12,10 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.AbstractCreature;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
+import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import sts2teaser.powers.AggressionPower;
@@ -25,18 +27,10 @@ import static sts2teaser.STS2Teaser.*;
 public class Aggression extends CustomCard {
     public final static String ID = makeID("Aggression");
 
-    private static String NAME = "Aggression";
-    private static String DESC = "At the start of your turn, NL " +
-            "put a random Attack (2 random Attacks) from NL " +
-            "your discard pile into your NL " +
-            "Hand and Upgrade it.";
-    private static String UPGRADED_DESC = "At the start of your turn, NL " +
-            "put !M! random Attacks from NL " +
-            "your discard pile into your NL " +
-            "Hand and Upgrade it.";
+    private static CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
 
     public Aggression() {
-        super(ID, NAME, makeCardPath("Aggression"), 1, DESC, CardType.POWER, AbstractCard.CardColor.RED, CardRarity.RARE, AbstractCard.CardTarget.SELF);
+        super(ID, cardStrings.NAME, makeCardPath("Aggression"), 1, cardStrings.DESCRIPTION, CardType.POWER, AbstractCard.CardColor.RED, CardRarity.RARE, AbstractCard.CardTarget.SELF);
         baseMagicNumber = magicNumber = 1;
     }
 
@@ -47,16 +41,16 @@ public class Aggression extends CustomCard {
     public void applyPowers() {
         super.applyPowers();
         if (magicNumber > 1) {
-            rawDescription = UPGRADED_DESC;
+            rawDescription = cardStrings.UPGRADE_DESCRIPTION;
         } else {
-            rawDescription = DESC;
+            rawDescription = cardStrings.DESCRIPTION;
         }
     }
 
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
-            rawDescription = UPGRADED_DESC;
+            rawDescription = cardStrings.UPGRADE_DESCRIPTION;
             upgradeMagicNumber(1);
         }
     }

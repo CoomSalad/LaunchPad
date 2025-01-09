@@ -2,5 +2,27 @@
   "${ModID}:Cinder": {
     "NAME": "Cinder",
     "DESCRIPTION": "Deal !D! damage. NL Exhaust the top !M! cards in NL your Draw Pile."
+  },
+  "${ModID}:Breakthrough": {
+    "NAME": "Breakthrough",
+    "DESCRIPTION": "Lose !M! HP. NL Deal !D! damage to ALL enemies."
+  },
+  "${ModID}:BloodWall": {
+    "NAME": "Blood Wall",
+    "DESCRIPTION": "Lose !M! HP. NL Gain !B! Block."
+  },
+  "${ModID}:Tremble": {
+    "NAME": "Tremble",
+    "DESCRIPTION": "Apply !M! Vulnerable. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Apply !M! Vulnerable. NL Exhaust."
+  },
+  "${ModID}:Bully": {
+    "NAME": "Bully",
+    "DESCRIPTION": "Deal !D! damage. NL Deal !M! additional damage for each Vulnerable on the enemy."
+  },
+  "${ModID}:Aggression": {
+    "NAME": "Aggression",
+    "DESCRIPTION": "At the start of your turn, NL put a random Attack from NL your discard pile into your NL Hand and Upgrade it.",
+    "UPGRADE_DESCRIPTION": "At the start of your turn, NL put !M! random Attacks from NL your discard pile into your NL Hand and Upgrade it."
   }
 }

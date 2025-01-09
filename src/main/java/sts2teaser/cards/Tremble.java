@@ -14,8 +14,10 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.AbstractCreature;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
+import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.VulnerablePower;
@@ -27,12 +29,10 @@ import static sts2teaser.STS2Teaser.*;
 public class Tremble extends CustomCard {
     public final static String ID = makeID("Tremble");
 
-    private static String NAME = "Tremble";
-    private static String DESC = "Apply !M! Vulnerable. NL Exhaust.";
-    private static String UPGRADED_DESC = "Apply !M! Vulnerable to ALL enemies. NL Exhaust.";
+    private static CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
 
     public Tremble() {
-        super(ID, NAME, makeCardPath("Tremble"), 0, DESC, AbstractCard.CardType.SKILL, AbstractCard.CardColor.RED, AbstractCard.CardRarity.UNCOMMON, AbstractCard.CardTarget.ENEMY);
+        super(ID, cardStrings.NAME, makeCardPath("Tremble"), 0, cardStrings.DESCRIPTION, AbstractCard.CardType.SKILL, AbstractCard.CardColor.RED, AbstractCard.CardRarity.UNCOMMON, AbstractCard.CardTarget.ENEMY);
         baseMagicNumber = magicNumber = 2;
         exhaust = true;
     }
@@ -52,7 +52,7 @@ public class Tremble extends CustomCard {
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
-            rawDescription = UPGRADED_DESC;
+            rawDescription = cardStrings.UPGRADE_DESCRIPTION;
             target = AbstractCard.CardTarget.ALL_ENEMY;
         }
     }

@@ -12,6 +12,8 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.AbstractCreature;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.AbstractGameEffect;
 import com.megacrit.cardcrawl.vfx.combat.CleaveEffect;
@@ -21,11 +23,10 @@ import static sts2teaser.STS2Teaser.*;
 public class Breakthrough extends CustomCard {
     public final static String ID = makeID("Breakthrough");
 
-    private static String NAME = "Breakthrough";
-    private static String DESC = "Lose !M! HP. NL Deal !D! damage to ALL enemies.";
+    private static CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
 
     public Breakthrough() {
-        super(ID, NAME, makeCardPath("Breakthrough"), 1, DESC, AbstractCard.CardType.ATTACK, AbstractCard.CardColor.RED, AbstractCard.CardRarity.COMMON, CardTarget.ALL_ENEMY);
+        super(ID, cardStrings.NAME, makeCardPath("Breakthrough"), 1, cardStrings.DESCRIPTION, AbstractCard.CardType.ATTACK, AbstractCard.CardColor.RED, AbstractCard.CardRarity.COMMON, CardTarget.ALL_ENEMY);
         baseDamage = 10;
         baseMagicNumber = magicNumber = 1;
         isMultiDamage = true;

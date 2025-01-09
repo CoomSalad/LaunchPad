@@ -9,6 +9,8 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.AbstractCreature;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.AbstractGameEffect;
 import com.megacrit.cardcrawl.vfx.combat.CleaveEffect;
@@ -19,11 +21,10 @@ import static sts2teaser.STS2Teaser.*;
 public class BloodWall extends CustomCard {
     public final static String ID = makeID("BloodWall");
 
-    private static String NAME = "Blood Wall";
-    private static String DESC = "Lose !M! HP. NL Gain !B! Block.";
+    private static CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
 
     public BloodWall() {
-        super(ID, NAME, makeCardPath("BloodWall"), 2, DESC, AbstractCard.CardType.SKILL, AbstractCard.CardColor.RED, AbstractCard.CardRarity.COMMON, CardTarget.SELF);
+        super(ID, cardStrings.NAME, makeCardPath("BloodWall"), 2, cardStrings.DESCRIPTION, AbstractCard.CardType.SKILL, AbstractCard.CardColor.RED, AbstractCard.CardRarity.COMMON, CardTarget.SELF);
         baseBlock = 15;
         baseMagicNumber = magicNumber = 2;
     }

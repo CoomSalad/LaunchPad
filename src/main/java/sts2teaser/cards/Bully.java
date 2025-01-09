@@ -11,8 +11,10 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.AbstractCreature;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
+import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import java.util.Iterator;
@@ -22,11 +24,10 @@ import static sts2teaser.STS2Teaser.*;
 public class Bully extends CustomCard {
     public final static String ID = makeID("Bully");
 
-    private static String NAME = "Bully";
-    private static String DESC = "Deal !D! damage. NL Deal !M! additional damage for each Vulnerable on the enemy.";
+    private static CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
 
     public Bully() {
-        super(ID, NAME, makeCardPath("Bully"), 0, DESC, AbstractCard.CardType.ATTACK, AbstractCard.CardColor.RED, CardRarity.UNCOMMON, AbstractCard.CardTarget.ENEMY);
+        super(ID, cardStrings.NAME, makeCardPath("Bully"), 0, cardStrings.DESCRIPTION, AbstractCard.CardType.ATTACK, AbstractCard.CardColor.RED, CardRarity.UNCOMMON, AbstractCard.CardTarget.ENEMY);
         baseDamage = 4;
         baseMagicNumber = magicNumber = 2;
     }
