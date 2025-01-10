@@ -25,6 +25,7 @@ public class STS2Teaser implements EditCardsSubscriber, EditStringsSubscriber, P
 
     public static Settings.GameLanguage[] SupportedLanguages = {
             Settings.GameLanguage.ENG,
+            Settings.GameLanguage.ZHS
     };
 
     private String getLangString() {

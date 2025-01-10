@@ -1,0 +1,48 @@
+{
+  "${ModID}:Cinder": {
+    "NAME": "燃尽",
+    "DESCRIPTION": "造成!D!点伤害。 NL 消耗 抽牌堆顶部的!M!张牌。"
+  },
+  "${ModID}:Breakthrough": {
+    "NAME": "突围",
+    "DESCRIPTION": "失去!M!点生命。 NL 对所有敌人造成!D!点伤害。"
+  },
+  "${ModID}:BloodWall": {
+    "NAME": "血壁",
+    "DESCRIPTION": "失去!M!点生命。 NL 获得!B!点 格挡 。"
+  },
+  "${ModID}:Tremble": {
+    "NAME": "颤抖",
+    "DESCRIPTION": "给予!M!层 易伤 。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "给予所有敌人!M!层 易伤 。 NL 消耗 。"
+  },
+  "${ModID}:Bully": {
+    "NAME": "凌弱",
+    "DESCRIPTION": "造成!D!点伤害。 NL 额外造成目标 易伤 层数!M!倍的伤害。"
+  },
+  "${ModID}:Aggression": {
+    "NAME": "气盛",
+    "DESCRIPTION": "在你的回合开始时， NL 随机将你弃牌堆中1张 NL 攻击牌放入你的手牌， NL 并将其 升级 。",
+    "UPGRADE_DESCRIPTION": "在你的回合开始时， NL 随机将你弃牌堆中!M!张 NL 攻击牌放入你的手牌， NL 并将其 升级 。"
+  },
+  "${ModID}:StoneArmor": {
+    "NAME": "石盔甲",
+    "DESCRIPTION": "获得!M!层 多层护甲 。 NL 失去1点 敏捷 。"
+  },
+  "${ModID}:Unrelenting": {
+    "NAME": "不挠",
+    "DESCRIPTION": "造成!D!点伤害。 NL 你打出的下一张攻击牌 NL 耗能变为0。"
+  },
+  "${ModID}:CHAAARGE": {
+    "NAME": "冲口也！",
+    "DESCRIPTION": "对所有敌人造成 NL 你当前 格挡值 的伤害。 NL 消耗。",
+    "UPGRADE_DESCRIPTION": "对所有敌人造成 NL 你当前 格挡 值的伤害。",
+    "EXTENDED_DESCRIPTION": [
+      " NL （造成!D!点伤害。）"
+    ]
+  },
+  "${ModID}:Hellraiser": {
+    "NAME": "亡者追击",
+    "DESCRIPTION": "每当你抽到 NL 名字中有 打击 的牌， NL 将其对随机敌人打出。"
+  }
+}

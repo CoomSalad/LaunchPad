@@ -36,7 +36,10 @@
   "${ModID}:CHAAARGE": {
     "NAME": "CHAAARGE",
     "DESCRIPTION": "Deal damage equal to NL your Block to ALL enemies. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Deal damage equal to NL your Block to ALL enemies."
+    "UPGRADE_DESCRIPTION": "Deal damage equal to NL your Block to ALL enemies.",
+    "EXTENDED_DESCRIPTION": [
+      " NL (Deal !D! damage.)"
+    ]
   },
   "${ModID}:Hellraiser": {
     "NAME": "Hellraiser",

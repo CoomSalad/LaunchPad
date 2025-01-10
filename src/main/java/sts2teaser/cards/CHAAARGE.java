@@ -57,7 +57,7 @@ public class CHAAARGE extends CustomCard {
         } else {
             this.rawDescription = cardStrings.DESCRIPTION;
         }
-        this.rawDescription += " NL (Deal !D! damage.)";
+        this.rawDescription += cardStrings.EXTENDED_DESCRIPTION[0];
         initializeDescription();
     }
 
@@ -77,7 +77,7 @@ public class CHAAARGE extends CustomCard {
         } else {
             this.rawDescription = cardStrings.DESCRIPTION;
         }
-        this.rawDescription += " NL (Deal !D! damage.)";
+        this.rawDescription += cardStrings.EXTENDED_DESCRIPTION[0];
         initializeDescription();
     }
 
