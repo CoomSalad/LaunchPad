@@ -47,6 +47,12 @@ public class STS2Teaser implements EditCardsSubscriber, EditStringsSubscriber, P
     public static String makeCardPath(String cardName) {
         return modID + "Resources/images/cards/" + cardName + ".png";
     }
+    public static String makePowerPath(String powerName) {
+        return modID + "Resources/images/powers/" + powerName + ".png";
+    }
+    public static String makeHiDefPowerPath(String powerName) {
+        return modID + "Resources/images/powers/" + powerName + "_l.png";
+    }
 
     public static void initialize() {
         STS2Teaser thismod = new STS2Teaser();

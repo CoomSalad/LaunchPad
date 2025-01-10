@@ -6,5 +6,13 @@
       " random Attack from your discard pile into your Hand and Upgrade it.",
       " random Attacks from your discard pile into your Hand and Upgrade them."
     ]
+  },
+  "${ModID}:Hellraiser": {
+    "NAME": "Hellraiser",
+    "DESCRIPTIONS": [
+      "Whenever you draw a card containing \"Strike\", it is played against a random enemy #b",
+      " time.",
+      " times."
+    ]
   }
 }

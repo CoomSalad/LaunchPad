@@ -37,5 +37,9 @@
     "NAME": "CHAAARGE",
     "DESCRIPTION": "Deal damage equal to NL your Block to ALL enemies. NL Exhaust.",
     "UPGRADE_DESCRIPTION": "Deal damage equal to NL your Block to ALL enemies."
+  },
+  "${ModID}:Hellraiser": {
+    "NAME": "Hellraiser",
+    "DESCRIPTION": "Whenever you draw a NL card containing \"Strike\", NL it is played against a NL random enemy."
   }
 }
