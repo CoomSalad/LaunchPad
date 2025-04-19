@@ -44,5 +44,9 @@
   "${ModID}:Hellraiser": {
     "NAME": "亡者追击",
     "DESCRIPTION": "每当你抽到 NL 名字中有 打击 的牌， NL 将其对随机敌人打出。"
+  },
+  "${ModID}:Cruelty": {
+    "NAME": "无情",
+    "DESCRIPTION": "有易伤的敌人受到的伤害会再额外增加!M!%。"
   }
 }

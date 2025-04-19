@@ -14,5 +14,12 @@
       " time.",
       " times."
     ]
+  },
+  "${ModID}:Cruelty": {
+    "NAME": "Cruelty",
+    "DESCRIPTIONS": [
+      "Vulnerable enemies take an additional #b",
+      "% damage."
+    ]
   }
 }

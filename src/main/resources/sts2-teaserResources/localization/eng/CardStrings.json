@@ -44,5 +44,9 @@
   "${ModID}:Hellraiser": {
     "NAME": "Hellraiser",
     "DESCRIPTION": "Whenever you draw a NL card containing \"Strike\", NL it is played against a NL random enemy."
+  },
+  "${ModID}:Cruelty": {
+    "NAME": "Cruelty",
+    "DESCRIPTION": "Vulnerable enemies take an additional !M!% damage."
   }
 }
